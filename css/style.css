@@ -1,15 +1,5 @@
 /* =========================================================
    Ahmed Noorim, academic portfolio
-
-   Breakpoints (same values as Tailwind CSS):
-     2xl  1536px and up   large desktops: roomier three columns
-     xl   1280–1535px     desktops: three columns
-     lg   1024–1279px     laptops: two columns, contents button
-     md    768–1023px     tablets: one column, profile card on top
-     sm    640–767px      mobile landscape / small tablets
-     base  under 640px    phones
-   Full details in the RESPONSIVE LAYOUT part near the bottom.
-   ---------------------------------------------------------
    Palette: eucalyptus and fog, with a soft amber accent
    (the amber echoes the optic disc in a fundus photograph).
    ========================================================= */
@@ -175,7 +165,7 @@ a:hover { color: var(--link-hover); text-decoration-color: currentColor; }
   padding: var(--sticky-top) 32px 72px;
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr) 236px;
-  gap: 48px;
+  gap: 56px;
   align-items: start;
 }
 
@@ -727,27 +717,9 @@ ol.pubs .pub::before {
 }
 
 /* =========================================================
-   RESPONSIVE LAYOUT
-   Breakpoints use the same values as Tailwind CSS:
-
-     2xl   1536px and up   Large desktops: roomier three columns
-     xl    1280–1535px     Desktops: three columns (the default
-                           styles above this section)
-     lg    1024–1279px     Laptops: profile sidebar + content;
-                           "On this page" opens from a button
-     md     768–1023px     Tablets: one column, profile card on top
-     sm     640–767px      Mobile landscape / small tablets:
-                           bigger Contents button
-     base   under 640px    Phones: dates and labels stack above text
-
-   Each block below applies to its tier AND everything smaller,
-   so later blocks fine-tune earlier ones.
-   If you change 1280px, change it in js/main.js too.
+   Large screens (1600px and wider): a little more room
    ========================================================= */
-
-
-/* ---------- 2xl: 1536px and up ---------- */
-@media (min-width: 1536px) {
+@media (min-width: 1600px) {
   .layout {
     max-width: 1520px;
     grid-template-columns: 300px minmax(0, 1fr) 260px;
@@ -756,10 +728,11 @@ ol.pubs .pub::before {
   .content { max-width: 48rem; }
 }
 
-
-/* ---------- lg and below (under 1280px) ----------
-   Two columns; the right panel becomes a floating sheet */
-@media (max-width: 1279.98px) {
+/* =========================================================
+   Laptop / tablet (1000–1299px): left sidebar stays,
+   contents panel becomes a floating button
+   ========================================================= */
+@media (max-width: 1299.98px) {
   .layout {
     grid-template-columns: 260px minmax(0, 1fr);
     gap: 48px;
@@ -796,11 +769,15 @@ ol.pubs .pub::before {
 @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
 
 
-/* ---------- md and below (under 1024px) ----------
-   One column; profile becomes a card at the top */
-@media (max-width: 1023.98px) {
+
+/* =========================================================
+   Phone and small tablet (under 1000px): one column,
+   profile becomes a card at the top
+   ========================================================= */
+@media (max-width: 999.98px) {
   .layout {
-    max-width: calc(46rem + 32px);   /* keeps lines readable on tablets */
+    max-width: calc(46rem + 32px);   /* keeps lines readable on wider tablets */
+    grid-template-columns: minmax(0, 1fr);  
     grid-template-columns: minmax(0, 1fr);
     gap: 8px;
     padding: 16px 16px 104px;
@@ -869,19 +846,12 @@ ol.pubs .pub::before {
   .content h2 { font-size: 1.5rem; }
 }
 
-
-/* ---------- sm and md only (640–1023px) ----------
-   Opened contact links sit in two columns */
-@media (min-width: 640px) and (max-width: 1023.98px) {
-  .profile.links-open .profile-links { grid-template-columns: 1fr 1fr; column-gap: 24px; }
-}
-
-
-/* ---------- sm and below (under 768px) ----------
-   Mobile portrait and landscape: bigger Contents button and
-   finger-friendly panel rows. The second condition also catches
-   phones held sideways that are wider than 768px. */
-@media (max-width: 767.98px), (max-height: 500px) and (pointer: coarse) {
+@media (min-width: 560px) and (max-width: 999.98px) {
+  .profile.links-open .profile-links { 
+    grid-template-columns: 1fr 1fr; 
+    column-gap: 24px; 
+  }
+  
   .toc-fab {
     right: 18px;
     bottom: 22px;
@@ -902,10 +872,7 @@ ol.pubs .pub::before {
   .toc-list ol a { font-size: 0.95rem; }
 }
 
-
-/* ---------- base: phones (under 640px) ----------
-   Dates and labels stack above their text */
-@media (max-width: 639.98px) {
+@media (max-width: 599.98px) {
   body { font-size: 1rem; }
   .entry,
   .group { grid-template-columns: minmax(0, 1fr); }
