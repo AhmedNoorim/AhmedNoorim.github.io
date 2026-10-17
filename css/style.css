@@ -864,7 +864,7 @@ ol.pubs .pub::before {
    Phones only (portrait under 600px, or landscape on a
    touchscreen): bigger Contents button and panel rows
    ========================================================= */
-@media (max-width: 999.98px), (max-height: 500px) and (pointer: coarse) {
+@media (max-width: 599.98px), (max-height: 500px) and (pointer: coarse) {
   .toc-fab {
     right: 18px;
     bottom: 22px;
