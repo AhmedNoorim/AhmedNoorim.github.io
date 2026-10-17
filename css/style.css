@@ -847,24 +847,11 @@ ol.pubs .pub::before {
 }
 
 @media (min-width: 560px) and (max-width: 999.98px) {
-  .profile.links-open .profile-links { grid-template-columns: 1fr 1fr; column-gap: 24px; }
-}
-
-@media (max-width: 599.98px) {
-  body { font-size: 1rem; }
-  .entry,
-  .group { grid-template-columns: minmax(0, 1fr); }
-  .entry-date { padding: 0; margin-bottom: 0.15rem; }
-  .group { gap: 0.4rem; }
-  ol.pubs .pub { padding-left: 2.2rem; }
-  .awards li { flex-direction: column; }
-}
-
-/* =========================================================
-   Phones only (portrait under 600px, or landscape on a
-   touchscreen): bigger Contents button and panel rows
-   ========================================================= */
-@media (max-width: 999.98px) and (pointer: coarse) {
+  .profile.links-open .profile-links { 
+    grid-template-columns: 1fr 1fr; 
+    column-gap: 24px; 
+  }
+  
   .toc-fab {
     right: 18px;
     bottom: 22px;
@@ -883,6 +870,16 @@ ol.pubs .pub::before {
   .toc-close .icon { width: 1.35em; height: 1.35em; }
   .toc-list a { padding-top: 9px; padding-bottom: 9px; font-size: 1rem; }
   .toc-list ol a { font-size: 0.95rem; }
+}
+
+@media (max-width: 599.98px) {
+  body { font-size: 1rem; }
+  .entry,
+  .group { grid-template-columns: minmax(0, 1fr); }
+  .entry-date { padding: 0; margin-bottom: 0.15rem; }
+  .group { gap: 0.4rem; }
+  ol.pubs .pub { padding-left: 2.2rem; }
+  .awards li { flex-direction: column; }
 }
 
 /* ---------- Motion and print ---------- */
