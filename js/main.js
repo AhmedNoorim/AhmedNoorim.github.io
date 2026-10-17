@@ -11,21 +11,23 @@
 
   var root = document.documentElement;
   var body = document.body;
-  var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
   var sheetQuery = window.matchMedia('(max-width: 1299.98px)');
 
   /* ---------- 1. Theme toggle ---------- */
   var themeBtn = document.querySelector('.theme-toggle');
 
+  var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+
+  // Light unless the visitor switched to dark with the toggle
   function activeTheme() {
-    var chosen = root.getAttribute('data-theme');
-    if (chosen === 'light' || chosen === 'dark') return chosen;
-    return darkQuery.matches ? 'dark' : 'light';
+    return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
   }
 
   function syncThemeButton() {
-    if (!themeBtn) return;
     var isDark = activeTheme() === 'dark';
+    // Browser bar color on phones follows the chosen theme
+    if (themeColorMeta) themeColorMeta.setAttribute('content', isDark ? '#141B1A' : '#EDF1EF');
+    if (!themeBtn) return;
     themeBtn.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
     themeBtn.setAttribute('title', isDark ? 'Light theme' : 'Dark theme');
   }
@@ -38,7 +40,6 @@
       syncThemeButton();
     });
   }
-  darkQuery.addEventListener('change', syncThemeButton);
   syncThemeButton();
 
   /* ---------- 2. Build the contents list ---------- */

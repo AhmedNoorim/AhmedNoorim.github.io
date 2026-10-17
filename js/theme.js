@@ -1,6 +1,6 @@
 /* Runs in <head> before the page paints, so a saved dark/light
    choice applies without a flash. With nothing saved, the site
-   follows the visitor's system setting (handled in style.css). */
+   shows the light theme. */
 (function () {
   try {
     var saved = localStorage.getItem('theme');
@@ -8,6 +8,6 @@
       document.documentElement.setAttribute('data-theme', saved);
     }
   } catch (e) {
-    /* Storage blocked: fall back to the system setting */
+    /* Storage blocked: stay on the light theme */
   }
 })();
