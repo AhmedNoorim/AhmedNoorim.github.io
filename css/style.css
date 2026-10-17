@@ -203,7 +203,7 @@ a:hover { color: var(--link-hover); text-decoration-color: currentColor; }
 .avatar {
   width: 172px;
   height: 172px;
-  margin: 13px 0 26px 13px;
+  margin: 13px auto 26px;
   border-radius: 50%;
   /* Two thin rings, like the iris around a pupil */
   box-shadow:
@@ -468,9 +468,19 @@ a:hover { color: var(--link-hover); text-decoration-color: currentColor; }
 .status-dot {
   width: 8px;
   height: 8px;
+  flex: none;
   border-radius: 50%;
   background: var(--amber);
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--amber) 25%, transparent);
+  animation: status-blink 1.85s ease-in-out infinite;
+}
+
+/* Soft blink: the dot dims while a ring ripples outward and fades */
+@keyframes status-blink {
+  0%   { opacity: 1;    box-shadow: 0 0 0 0 color-mix(in srgb, var(--amber) 60%, transparent); }
+  50%  { opacity: 0.35; }
+  70%  { box-shadow: 0 0 0 7px color-mix(in srgb, var(--amber) 0%, transparent); }
+  100% { opacity: 1;    box-shadow: 0 0 0 0 color-mix(in srgb, var(--amber) 0%, transparent); }
 }
 
 /* Label + values rows (interests, skills) */
@@ -841,6 +851,7 @@ ol.pubs .pub::before {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+  .status-dot { animation: none !important; }
 }
 
 @media print {
