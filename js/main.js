@@ -12,7 +12,7 @@
   var root = document.documentElement;
   var body = document.body;
   var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  var sheetQuery = window.matchMedia('(max-width: 1199.98px)');
+  var sheetQuery = window.matchMedia('(max-width: 1299.98px)');
 
   /* ---------- 1. Theme toggle ---------- */
   var themeBtn = document.querySelector('.theme-toggle');

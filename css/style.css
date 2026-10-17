@@ -717,9 +717,22 @@ ol.pubs .pub::before {
 }
 
 /* =========================================================
-   Tablet (900–1199px): left sidebar stays, contents float
+   Large screens (1600px and wider): a little more room
    ========================================================= */
-@media (max-width: 1199.98px) {
+@media (min-width: 1600px) {
+  .layout {
+    max-width: 1520px;
+    grid-template-columns: 300px minmax(0, 1fr) 260px;
+    gap: 72px;
+  }
+  .content { max-width: 48rem; }
+}
+
+/* =========================================================
+   Laptop / tablet (1000–1299px): left sidebar stays,
+   contents panel becomes a floating button
+   ========================================================= */
+@media (max-width: 1299.98px) {
   .layout {
     grid-template-columns: 260px minmax(0, 1fr);
     gap: 48px;
@@ -755,11 +768,16 @@ ol.pubs .pub::before {
 
 @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
 
+
+
 /* =========================================================
-   Phone (under 900px): profile becomes a card at the top
+   Phone and small tablet (under 1000px): one column,
+   profile becomes a card at the top
    ========================================================= */
-@media (max-width: 899.98px) {
+@media (max-width: 999.98px) {
   .layout {
+    max-width: calc(46rem + 32px);   /* keeps lines readable on wider tablets */
+    grid-template-columns: minmax(0, 1fr);  
     grid-template-columns: minmax(0, 1fr);
     gap: 8px;
     padding: 16px 16px 104px;
@@ -828,7 +846,7 @@ ol.pubs .pub::before {
   .content h2 { font-size: 1.5rem; }
 }
 
-@media (min-width: 560px) and (max-width: 899.98px) {
+@media (min-width: 560px) and (max-width: 999.98px) {
   .profile.links-open .profile-links { grid-template-columns: 1fr 1fr; column-gap: 24px; }
 }
 
