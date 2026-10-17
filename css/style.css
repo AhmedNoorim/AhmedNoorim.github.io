@@ -437,6 +437,7 @@ a:hover { color: var(--link-hover); text-decoration-color: currentColor; }
 
 .content p,
 .content li { max-width: 68ch; }
+.content strong { font-weight: 600; }
 
 /* Intro */
 .lede {
@@ -540,6 +541,45 @@ a:hover { color: var(--link-hover); text-decoration-color: currentColor; }
 .entry-org { color: var(--muted); }
 .entry-body > .entry-org + p:not(.entry-note) { margin-top: 0.45rem; }
 .entry-note { color: var(--muted); font-size: 0.95rem; }
+
+/* Grade badge (CGPA / GPA) */
+.entry-body > .score {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  margin: 0.6rem 0 0.15rem;
+  padding: 0.35rem 0.95rem 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: var(--chip);
+  border: 1px solid color-mix(in srgb, var(--amber) 45%, transparent);
+}
+.score-label {
+  color: var(--chip-ink);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+.score-value {
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.score-scale { color: var(--muted); font-size: 0.92rem; }
+.entry-body > .score + .entry-note { margin-top: 0.45rem; }
+
+/* Project links: a link with an empty href="" stays hidden */
+.entry-body > .proj-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+  margin-top: 0.7rem;
+}
+.proj-links a[href=""] { display: none; }
+.proj-links:not(:has(a:not([href=""]))) { display: none; }
+.proj-links .pub-link .icon { width: 1.05em; height: 1.05em; }
 
 /* Thesis block */
 .feature {

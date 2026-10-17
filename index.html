@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ahmed Noorim | Computer Vision &amp; Medical Imaging</title>
-  <meta name="description" content="Ahmed Noorim is a computer vision and medical imaging researcher and M.Sc. student at BRAC University, Bangladesh.">
+  <meta name="description" content="Ahmed Noorim is a computer vision and medical imaging researcher and a Computer Science and Engineering graduate of East Delta University, Bangladesh.">
   <meta name="author" content="Ahmed Noorim">
 
   <!-- Link previews (LinkedIn, WhatsApp, Slack, etc.) -->
@@ -46,11 +46,15 @@
     <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></symbol>
     <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
     <symbol id="i-ext" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M10 8.5v7l5.5-3.5z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></symbol>
   </svg>
 
   <div class="layout">
 
-    <!-- ============ LEFT: profile sidebar ============ -->
+<!-- #####################################################################
+     LEFT SIDEBAR: profile photo, name, short bio, contact links, CV button
+     ##################################################################### -->
     <aside class="profile" id="profile" aria-label="Profile">
       <div class="profile-head">
         <div class="avatar">
@@ -59,7 +63,7 @@
         </div>
         <div class="profile-id">
           <h1 class="profile-name">Ahmed Noorim</h1>
-          <p class="profile-bio">Computer vision and medical imaging researcher. M.Sc. student at BRAC University.</p>
+          <p class="profile-bio">Computer vision and medical imaging researcher. B.Sc. in Computer Science and Engineering.</p>
         </div>
       </div>
 
@@ -69,6 +73,7 @@
         <svg class="icon" aria-hidden="true"><use href="#i-chev"/></svg>
       </button>
 
+      <!-- Each <li> is one row. Copy a row to add another link. -->
       <ul class="profile-links" id="profile-links">
         <li>
           <span class="row">
@@ -79,7 +84,7 @@
         <li>
           <span class="row">
             <svg class="icon" aria-hidden="true"><use href="#i-bank"/></svg>
-            <span>BRAC University</span>
+            <span>East Delta University</span>
           </span>
         </li>
         <li>
@@ -89,8 +94,7 @@
           </a>
         </li>
         <li>
-          <!-- Replace with your profile URL, e.g. https://scholar.google.com/citations?user=XXXXXXX -->
-          <a class="row" href="https://scholar.google.com/citations?view_op=search_authors&amp;mauthors=Ahmed+Noorim" target="_blank" rel="noopener">
+          <a class="row" href="https://scholar.google.com/citations?user=IphW5S4AAAAJ&amp;hl=en" target="_blank" rel="noopener">
             <svg class="icon" aria-hidden="true"><use href="#i-scholar"/></svg>
             <span>Google Scholar</span>
           </a>
@@ -129,24 +133,53 @@
         </button>
       </div>
     </aside>
+<!-- END LEFT SIDEBAR -->
 
-    <!-- ============ CENTER: main content ============
-         Every <h2 id="..."> and <h3 id="..."> inside <main> appears
-         in the "On this page" panel automatically. Use data-toc="..."
-         on a heading to give it a shorter label there. -->
+
+<!-- #####################################################################
+     MAIN CONTENT (center column)
+
+     Each section below sits between a "SECTION: ..." banner and an
+     "END SECTION" line, so you can find, move, copy or delete it whole.
+
+     The right-hand "On this page" panel is built automatically from
+     every <h2 id="..."> and <h3 id="..."> in here:
+       - h2 = top-level item, h3 = indented sub-item
+       - ids must be unique, lowercase, no spaces
+       - add data-toc="Short name" to show a shorter label in the panel
+     ##################################################################### -->
     <main class="content" id="main" tabindex="-1">
 
-      <section class="section intro">
+
+      <!-- =================================================================
+           SECTION: ABOUT
+           The large opening sentence and a short introduction.
+           (The "About" heading is hidden on screen but still listed in
+           the contents panel.)
+           ================================================================= -->
+      <section class="section intro" aria-labelledby="about">
         <h2 id="about" class="visually-hidden" data-toc="About">About</h2>
+
         <p class="lede">I build computer vision models that read medical images, and I want those models to explain what they see.</p>
-        <p>I am an M.Sc. student in Computer Science (Data Science specialization) at BRAC University, Bangladesh. I completed my B.Sc. in Computer Science and Engineering at East Delta University with a CGPA of 3.91 out of 4.00.</p>
-        <p>My work so far covers diabetic retinopathy grading from fundus photographs, segmentation and classification of skin lesions, and real-time object detection for road safety, resulting in three peer-reviewed conference papers. I am currently writing a systematic review on explainable multimodal large language models for automated medical report generation.</p>
+
+        <p>I am a Computer Science and Engineering graduate of East Delta University, Bangladesh, where I finished with a CGPA of <strong>3.91 out of 4.00</strong>.</p>
+
+        <p>My work covers diabetic retinopathy grading from fundus photographs, segmentation and classification of skin lesions, and real-time object detection for road safety, resulting in three peer-reviewed conference papers. I am especially interested in explainable and multimodal models for medical imaging.</p>
+
         <!-- Edit or delete this line as your plans change -->
         <p class="status"><span class="status-dot" aria-hidden="true"></span>Looking for PhD positions starting Fall 2027</p>
       </section>
+      <!-- END SECTION: ABOUT -->
 
-      <section class="section">
+
+      <!-- =================================================================
+           SECTION: RESEARCH INTERESTS
+           Each <div class="group"> is one labeled row of tags.
+           Add a tag with another <li>…</li>; add a row by copying a group.
+           ================================================================= -->
+      <section class="section" aria-labelledby="interests">
         <h2 id="interests">Research interests</h2>
+
         <dl class="groups">
           <div class="group">
             <dt>Medical AI</dt>
@@ -159,6 +192,7 @@
               </ul>
             </dd>
           </div>
+
           <div class="group">
             <dt>Computer vision</dt>
             <dd>
@@ -170,6 +204,7 @@
               </ul>
             </dd>
           </div>
+
           <div class="group">
             <dt>Systems</dt>
             <dd>
@@ -182,35 +217,51 @@
           </div>
         </dl>
       </section>
+      <!-- END SECTION: RESEARCH INTERESTS -->
 
-      <section class="section">
+
+      <!-- =================================================================
+           SECTION: EDUCATION
+           Each <li class="entry"> is one degree: date on the left,
+           details on the right. The <p class="score"> line shows the
+           grade as a highlighted badge.
+           ================================================================= -->
+      <section class="section" aria-labelledby="education">
         <h2 id="education">Education</h2>
+
         <ol class="entries">
-          <li class="entry">
-            <p class="entry-date">2026 – present</p>
-            <div class="entry-body">
-              <p class="entry-title">M.Sc. in Computer Science, Data Science specialization</p>
-              <p class="entry-org">BRAC University, Bangladesh</p>
-            </div>
-          </li>
+          <!-- B.Sc. -->
           <li class="entry">
             <p class="entry-date">2021 – 2025</p>
             <div class="entry-body">
               <p class="entry-title">B.Sc. in Computer Science and Engineering</p>
               <p class="entry-org">East Delta University, Chattogram</p>
-              <p class="entry-note">CGPA 3.91 / 4.00. Vice Chancellor's List and Dean's List.</p>
+              <p class="score">
+                <span class="score-label">CGPA</span>
+                <strong class="score-value">3.91</strong>
+                <span class="score-scale">/ 4.00</span>
+              </p>
+              <p class="entry-note">Vice Chancellor's List and Dean's List</p>
             </div>
           </li>
+
+          <!-- HSC -->
           <li class="entry">
             <p class="entry-date">2018 – 2020</p>
             <div class="entry-body">
               <p class="entry-title">Higher Secondary Certificate, Science</p>
               <p class="entry-org">Ispahani Public School and College, Chattogram</p>
-              <p class="entry-note">GPA 5.00 / 5.00</p>
+              <p class="score">
+                <span class="score-label">GPA</span>
+                <strong class="score-value">5.00</strong>
+                <span class="score-scale">/ 5.00</span>
+              </p>
             </div>
           </li>
         </ol>
 
+
+        <!-- ---------- Sub-section: Undergraduate thesis ---------- -->
         <h3 id="thesis">Undergraduate thesis</h3>
         <div class="feature">
           <p class="feature-title">An Ensemble Deep Learning Framework for Two-Stage Diabetic Retinopathy Diagnosis and Severity Screening</p>
@@ -223,12 +274,23 @@
           </ul>
         </div>
       </section>
+      <!-- END SECTION: EDUCATION -->
 
-      <section class="section">
+
+      <!-- =================================================================
+           SECTION: PUBLICATIONS
+           Each <li class="pub"> is one paper. Copy a whole <li>…</li>
+           to add one; the [1], [2] numbers update by themselves.
+           Wrap your own name in <strong class="me">…</strong>.
+           ================================================================= -->
+      <section class="section" aria-labelledby="publications">
         <h2 id="publications">Publications</h2>
 
+
+        <!-- ---------- Sub-section: Conference proceedings ---------- -->
         <h3 id="proceedings">Conference proceedings</h3>
         <ol class="pubs">
+          <!-- [1] Diabetic retinopathy -->
           <li class="pub" id="pub-dr">
             <p class="pub-title">An ensemble deep learning framework for two-stage diabetic retinopathy diagnosis and severity screening</p>
             <p class="pub-authors"><strong class="me">Noorim, A.</strong>, Jahan, R. N., Ahsan, M. S. A., Adhikary, S., &amp; Uddin, M. J.</p>
@@ -238,6 +300,8 @@
               <a class="pub-link" href="https://doi.org/10.1007/978-981-95-1365-9_27" target="_blank" rel="noopener">DOI <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
             </p>
           </li>
+
+          <!-- [2] PotholeNet11 -->
           <li class="pub">
             <p class="pub-title">PotholeNet11: A YOLO11-powered real-time framework for comprehensive pothole detection and road safety</p>
             <p class="pub-authors">Uddin, A., Ananna, F. B. F., Farah, N. T., <strong class="me">Noorim, A.</strong>, Hosen, M., Roy, P. S., &amp; Tasnia, N.</p>
@@ -246,6 +310,8 @@
               <a class="pub-link" href="https://doi.org/10.1109/ncim65934.2025.11160097" target="_blank" rel="noopener">DOI <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
             </p>
           </li>
+
+          <!-- [3] Lyme disease -->
           <li class="pub">
             <p class="pub-title">Enhancing Lyme disease erythema migrans rashes classification: U-Net segmentation and ensemble deep learning model</p>
             <p class="pub-authors">Farah, N. T., Pushpita, S. H., <strong class="me">Noorim, A.</strong>, Saha, A., Hosen, M., &amp; Uddin, A.</p>
@@ -256,28 +322,35 @@
           </li>
         </ol>
 
-        <h3 id="in-progress">Work in progress</h3>
-        <ul class="pubs pubs-plain">
-          <li class="pub">
-            <p class="pub-title">Explainable multimodal large language models for automated medical report generation: A systematic review of radiology and ophthalmology applications</p>
-            <p class="pub-venue">Systematic review, in preparation.</p>
-          </li>
-        </ul>
 
+        <!-- ---------- Sub-section: Poster presentations ---------- -->
         <h3 id="posters">Poster presentations</h3>
         <ul class="pubs pubs-plain">
           <li class="pub">
             <p class="pub-title">Router-based network for vehicle-to-hub communication to control vehicle speed</p>
             <p class="pub-authors"><strong class="me">Noorim, A.</strong>, &amp; Afrin, S.</p>
             <p class="pub-venue">Intra-University Poster Presentation, IEEE Student Branch, East Delta University, 2025.</p>
-            <p class="pub-meta"><span class="tag">2nd Runner-Up</span></p>
+            <p class="pub-meta">
+              <span class="tag">2nd Runner-Up</span>
+              <a class="pub-link" href="https://drive.google.com/file/d/1x1Ku4WIRbcwARro1hgFyfShZxwRH7SJk/view" target="_blank" rel="noopener">View poster <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </p>
           </li>
         </ul>
       </section>
+      <!-- END SECTION: PUBLICATIONS -->
 
-      <section class="section">
+
+      <!-- =================================================================
+           SECTION: PROJECTS
+           Each <li class="entry"> is one project.
+           Links: paste a URL between the quotes in href="". A link with
+           an empty href="" stays hidden, so unused slots are safe to keep.
+           ================================================================= -->
+      <section class="section" aria-labelledby="projects">
         <h2 id="projects">Projects</h2>
+
         <ol class="entries">
+          <!-- Bengali handwritten character recognition -->
           <li class="entry">
             <p class="entry-date">2024</p>
             <div class="entry-body">
@@ -286,8 +359,14 @@
               <ul class="chips chips-sm">
                 <li>TensorFlow</li><li>CNN</li><li>Flask</li>
               </ul>
+              <p class="proj-links">
+                <!-- PASTE LINK: Bengali project URL goes between the quotes -->
+                <a class="pub-link" href="" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg> View project</a>
+              </p>
             </div>
           </li>
+
+          <!-- DashBuy -->
           <li class="entry">
             <p class="entry-date">2024</p>
             <div class="entry-body">
@@ -296,8 +375,14 @@
               <ul class="chips chips-sm">
                 <li>Flutter</li><li>Barcode scanning</li>
               </ul>
+              <p class="proj-links">
+                <!-- PASTE LINK: DashBuy URL goes between the quotes -->
+                <a class="pub-link" href="" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg> View project</a>
+              </p>
             </div>
           </li>
+
+          <!-- Automated attendance system -->
           <li class="entry">
             <p class="entry-date">2023</p>
             <div class="entry-body">
@@ -306,25 +391,43 @@
               <ul class="chips chips-sm">
                 <li>ESP32-CAM</li><li>Arduino</li><li>Python</li><li>MongoDB</li><li>Flask</li>
               </ul>
+              <p class="proj-links">
+                <a class="pub-link" href="https://drive.google.com/drive/folders/1sWh4pK-UCIOrU7Il8MlNcuz5a_EaZczf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg> Watch video</a>
+              </p>
             </div>
           </li>
         </ol>
+
         <p class="more"><a href="https://github.com/AhmedNoorim" target="_blank" rel="noopener">More on GitHub</a></p>
       </section>
+      <!-- END SECTION: PROJECTS -->
 
-      <section class="section">
+
+      <!-- =================================================================
+           SECTION: HONORS AND AWARDS
+           Each <li> is one award: name on the left, organization/year
+           on the right.
+           ================================================================= -->
+      <section class="section" aria-labelledby="honors">
         <h2 id="honors">Honors and awards</h2>
+
         <ul class="awards">
           <li><span class="award-name">Vice Chancellor's List Award</span> <span class="award-org">East Delta University</span></li>
           <li><span class="award-name">Dean's List Award</span> <span class="award-org">East Delta University</span></li>
           <li><span class="award-name">Board of Trustees Grant Scholarship, merit-based</span> <span class="award-org">East Delta University</span></li>
-          <li><span class="award-name">Flat Fee Waiver</span> <span class="award-org">East Delta University</span></li>
           <li><span class="award-name">2nd Runner-Up, Intra-University Poster Presentation</span> <span class="award-org">East Delta University, 2025</span></li>
         </ul>
       </section>
+      <!-- END SECTION: HONORS AND AWARDS -->
 
-      <section class="section">
+
+      <!-- =================================================================
+           SECTION: SKILLS
+           Each <div class="group"> is one labeled row.
+           ================================================================= -->
+      <section class="section" aria-labelledby="skills">
         <h2 id="skills">Skills</h2>
+
         <dl class="groups groups-text">
           <div class="group">
             <dt>Programming</dt>
@@ -348,13 +451,20 @@
           </div>
           <div class="group">
             <dt>Languages</dt>
-            <dd>Bangla (native), English (fluent, IELTS 7.0)</dd>
+            <dd>Bangla (native), English (IELTS 7.0)</dd>
           </div>
         </dl>
       </section>
+      <!-- END SECTION: SKILLS -->
 
-      <section class="section">
+
+      <!-- =================================================================
+           SECTION: LEADERSHIP AND SERVICE
+           Dated roles first, then a short bullet list of activities.
+           ================================================================= -->
+      <section class="section" aria-labelledby="leadership">
         <h2 id="leadership">Leadership and service</h2>
+
         <ol class="entries">
           <li class="entry">
             <p class="entry-date">2022 – 2024</p>
@@ -371,14 +481,22 @@
             </div>
           </li>
         </ol>
+
         <ul class="bullets bullets-spaced">
           <li>Led peer study groups in college and university, running concept-clearing sessions and sharing notes.</li>
           <li>Volunteered with Hope Foundation, organizing iftar and distributing Eid gifts to children in rural areas.</li>
         </ul>
       </section>
+      <!-- END SECTION: LEADERSHIP AND SERVICE -->
 
-      <section class="section">
+
+      <!-- =================================================================
+           SECTION: OTHER PROFESSIONAL EXPERIENCE
+           Each <li class="entry"> is one role.
+           ================================================================= -->
+      <section class="section" aria-labelledby="experience">
         <h2 id="experience" data-toc="Other experience">Other professional experience</h2>
+
         <ol class="entries">
           <li class="entry">
             <p class="entry-date">2025</p>
@@ -406,18 +524,35 @@
           </li>
         </ol>
       </section>
+      <!-- END SECTION: OTHER PROFESSIONAL EXPERIENCE -->
 
-      <section class="section">
+
+      <!-- =================================================================
+           SECTION: CONTACT
+           ================================================================= -->
+      <section class="section" aria-labelledby="contact">
         <h2 id="contact">Contact</h2>
+
         <p>Email is the best way to reach me: <a href="mailto:ahmed.noorim07@gmail.com">ahmed.noorim07@gmail.com</a>. References are available on request.</p>
       </section>
+      <!-- END SECTION: CONTACT -->
 
+
+      <!-- =================================================================
+           FOOTER: update the date when you change the content
+           ================================================================= -->
       <footer class="site-footer">
         <p>© 2026 Ahmed Noorim. Last updated October 2026.</p>
       </footer>
-    </main>
 
-    <!-- ============ RIGHT: "On this page" panel (filled by js/main.js) ============ -->
+    </main>
+<!-- END MAIN CONTENT -->
+
+
+<!-- #####################################################################
+     RIGHT SIDEBAR: "On this page" panel
+     Leave the list empty; js/main.js fills it from the headings above.
+     ##################################################################### -->
     <aside class="toc" id="toc" aria-labelledby="toc-title">
       <div class="toc-head">
         <svg class="icon" aria-hidden="true"><use href="#i-list"/></svg>
@@ -430,10 +565,11 @@
         <ol class="toc-list" id="toc-list"></ol>
       </nav>
     </aside>
+<!-- END RIGHT SIDEBAR -->
 
   </div>
 
-  <!-- Tablet and phone: opens the "On this page" panel -->
+  <!-- Tablet and phone only: button that opens the "On this page" panel -->
   <button class="toc-fab" type="button" aria-controls="toc" aria-expanded="false">
     <svg class="icon" aria-hidden="true"><use href="#i-list"/></svg>
     <span>Contents</span>
