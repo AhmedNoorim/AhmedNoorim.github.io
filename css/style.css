@@ -860,6 +860,31 @@ ol.pubs .pub::before {
   .awards li { flex-direction: column; }
 }
 
+/* =========================================================
+   Phones only (portrait under 600px, or landscape on a
+   touchscreen): bigger Contents button and panel rows
+   ========================================================= */
+@media (max-width: 599.98px), (max-height: 500px) and (pointer: coarse) {
+  .toc-fab {
+    right: 18px;
+    bottom: 22px;
+    gap: 10px;
+    min-height: 56px;
+    padding: 14px 26px 14px 20px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .toc-fab .icon { width: 1.4em; height: 1.4em; }
+
+  .toc { bottom: 92px; padding: 22px 18px 20px; }
+  .toc-title { font-size: 1.15rem; }
+  .toc-close { width: 42px; height: 42px; }
+  .toc-close .icon { width: 1.35em; height: 1.35em; }
+  .toc-list a { padding-top: 9px; padding-bottom: 9px; font-size: 1rem; }
+  .toc-list ol a { font-size: 0.95rem; }
+}
+
 /* ---------- Motion and print ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
