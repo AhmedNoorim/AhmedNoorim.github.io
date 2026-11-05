@@ -166,7 +166,7 @@
 
         <!-- <p class="lede">I build computer vision models that read medical images, and I want those models to explain what they see.</p> -->
 
-        <p>I am a Computer Science and Engineering graduate of East Delta University, Bangladesh, where I finished with a CGPA of <strong>3.91 out of 4.00</strong>.</p>
+        <p>I am a Computer Science and Engineering graduate of East Delta University, Bangladesh, where I finished with a CGPA of <strong>3.91 out of 4.00</strong> (summa cum laude).</p>
 
         <p>My work covers diabetic retinopathy grading from fundus photographs, segmentation and classification of skin lesions, and real-time object detection for road safety, resulting in three peer-reviewed conference papers. </p>
 
@@ -194,7 +194,7 @@
                 <li>Computer-Aided Diagnostics</li>
                 <li>Medical Image Analysis</li>
                 <li>Biomedical Informatics</li>
-                <li>Explainable AI</li>
+                <li>Trustworthy and Explainable AI</li>
                 <li>Multimodal Models</li>
               </ul>
             </dd>
@@ -274,11 +274,10 @@
         <h3 id="thesis">Undergraduate thesis</h3>
         <div class="feature">
           <p class="feature-title">An Ensemble Deep Learning Framework for Two-Stage Diabetic Retinopathy Diagnosis and Severity Screening</p>
-          <p class="feature-meta">East Delta University, February 2025. Published as paper <a href="#pub-dr">[1]</a>.</p>
+          <p class="feature-meta">East Delta University, July 2024 – January 2025. Published as first author at ICTIS 2025, paper <a href="#pub-dr">[1]</a>.</p>
           <ul class="bullets">
-            <li>Designed a two-stage pipeline: a DenseNet121 detector first decides whether diabetic retinopathy is present, then a severity model grades it.</li>
-            <li>Built a weighted-average ensemble of DenseNet121, Xception and EfficientNetB1 for four-grade severity classification.</li>
-            <li>Merged APTOS 2019, MESSIDOR-2 and IDRiD into a 5,922-image dataset balanced with augmentation, and compared three fundus image preprocessing pipelines.</li>
+            <li>Designed a two-stage diabetic retinopathy (DR) framework: a DenseNet121 detector first decides whether DR is present, then a weighted ensemble of DenseNet121, Xception and EfficientNetB1 grades it into four severity levels.</li>
+            <li>Merged APTOS 2019, MESSIDOR-2 and IDRiD into a 5,922-image dataset, and benchmarked three fundus image preprocessing pipelines.</li>
           </ul>
         </div>
       </section>
@@ -299,9 +298,12 @@
               <p class="entry-title">Research Assistant</p>
               <p class="entry-org">Research Activator Lab (RA Lab), Bangladesh</p>
               <p class="entry-note">Part-time</p>
-              <!-- Optional: one or two sentences on what you work on there:
-              <p>Describe your role or projects here.</p>
-              -->
+              <ul class="bullets">
+                <li>Co-authored two IEEE conference papers: NCIM 2025 and BECITHCON 2024.</li>
+                <li>Trained and fine-tuned deep learning models (YOLO11, U-Net, ensemble CNNs).</li>
+                <li>Performed structured metadata extraction and screening for literature reviews.</li>
+                <li>Mentored junior lab members on literature search and academic writing.</li>
+              </ul>
               <ul class="chips chips-sm">
                 <li>Computer vision</li>
                 <li>Machine learning</li>
@@ -332,7 +334,7 @@
           <li class="pub" id="pub-dr">
             <p class="pub-title">An ensemble deep learning framework for two-stage diabetic retinopathy diagnosis and severity screening</p>
             <p class="pub-authors"><strong class="me">Noorim, A.</strong>, Jahan, R. N., Ahsan, M. S. A., Adhikary, S., &amp; Uddin, M. J.</p>
-            <p class="pub-venue"><em>Smart Innovation, Systems and Technologies</em>, pp. 333–342. Springer, 2025.</p>
+            <p class="pub-venue"><em>International Conference on Information and Communication Technology for Intelligent Systems (ICTIS 2025)</em>, Smart Innovation, Systems and Technologies, pp. 333–342. Springer, 2025.</p>
             <p class="pub-meta">
               <span class="tag">First author</span>
               <a class="pub-link" href="https://doi.org/10.1007/978-981-95-1365-9_27" target="_blank" rel="noopener">DOI <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
@@ -388,12 +390,12 @@
         <h2 id="projects">Projects</h2>
 
         <ol class="entries">
-          <!-- Bengali handwritten character recognition -->
+          <!-- Bengali handwritten alphabet classification -->
           <li class="entry">
             <p class="entry-date">2024</p>
             <div class="entry-body">
-              <p class="entry-title">Bengali handwritten character recognition</p>
-              <p>A convolutional neural network, built and trained from scratch, that classifies a single handwritten Bengali letter from an image, served through a small web app.</p>
+              <p class="entry-title">Bengali handwritten alphabet classification web app</p>
+              <p>A convolutional neural network trained from scratch in TensorFlow on a dataset of about 20,000 images, combining self-made and internet-sourced handwritten letters, and deployed through a Flask API and web interface.</p>
               <ul class="chips chips-sm">
                 <li>TensorFlow</li><li>CNN</li><li>Flask</li>
               </ul>
@@ -425,7 +427,7 @@
             <p class="entry-date">2023</p>
             <div class="entry-body">
               <p class="entry-title">Vision-based automated attendance system</p>
-              <p>An ESP32-CAM reads students' QR ID cards and records attendance automatically. Scan processing runs in Python, records live in MongoDB, and a Flask web interface and API sit on top.</p>
+              <p>A system that automates QR code scanning and attendance recording for an institution. An ESP32-CAM, configured with an FTDI module in the Arduino IDE, captures and scans the codes; the backend runs in Python, records live in MongoDB, and a Flask dashboard sits on top.</p>
               <ul class="chips chips-sm">
                 <li>ESP32-CAM</li><li>Arduino</li><li>Python</li><li>MongoDB</li><li>Flask</li>
               </ul>
@@ -450,11 +452,10 @@
         <h2 id="honors">Honors and Awards</h2>
 
         <ul class="awards">
-          <li><span class="award-name">Vice Chancellor's List Award</span> <span class="award-org">East Delta University</span></li>
-          <li><span class="award-name">Dean's List Award</span> <span class="award-org">East Delta University</span></li>
-          <li><span class="award-name">Board of Trustees Grant Scholarship (merit-based)</span> <span class="award-org">East Delta University</span></li>
-          <li><span class="award-name">Academic Honor “Summa Cum Laude”</span> <span class="award-org">East Delta University, 2025</span></li>
+          <li><span class="award-name">Board of Trustees Grant Scholarship (merit-based, competitive)</span> <span class="award-org">East Delta University, 2021 – 2025</span></li>
+          <li><span class="award-name">Summa Cum Laude, B.Sc. in Computer Science and Engineering</span> <span class="award-org">East Delta University, 2025</span></li>
           <li><span class="award-name">2nd Runner-Up, Intra-University Poster Presentation</span> <span class="award-org">East Delta University, 2025</span></li>
+          <li><span class="award-name">Vice Chancellor's List and Dean's List</span> <span class="award-org">East Delta University</span></li>
         </ul>
       </section>
       <!-- END SECTION: HONORS AND AWARDS -->
@@ -473,8 +474,12 @@
             <dd>Python, C/C++, Arduino, HTML/CSS</dd>
           </div>
           <div class="group">
-            <dt>Frameworks and tools</dt>
-            <dd>TensorFlow, PyTorch, Flask, Flutter, MongoDB, Kaggle, VS Code</dd>
+            <dt>Machine learning</dt>
+            <dd>TensorFlow, PyTorch, Keras, scikit-learn, OpenCV</dd>
+          </div>
+          <div class="group">
+            <dt>Tools</dt>
+            <dd>Flask, Flutter, MongoDB, Kaggle, Anaconda, LaTeX, VS Code</dd>
           </div>
           <div class="group">
             <dt>Models</dt>
@@ -482,7 +487,7 @@
           </div>
           <div class="group">
             <dt>Research</dt>
-            <dd>Academic writing, Boolean Search, Structured Metadata Extraction</dd>
+            <dd>Systematic Literature Search, Structured Metadata Extraction, Academic Writing</dd>
           </div>
           <div class="group">
             <dt>Design and media</dt>
@@ -510,6 +515,15 @@
             <div class="entry-body">
               <p class="entry-title">Vice Convener</p>
               <p class="entry-org">East Delta University Erudition Club</p>
+              <p>Organized academic talks and inter-departmental events for 100+ members.</p>
+            </div>
+          </li>
+          <li class="entry">
+            <p class="entry-date">2024 – 2025</p>
+            <div class="entry-body">
+              <p class="entry-title">Volunteer</p>
+              <p class="entry-org">Hope Foundation</p>
+              <p>Arranged educational and celebratory festival events for rural children.</p>
             </div>
           </li>
           <li class="entry">
@@ -517,13 +531,13 @@
             <div class="entry-body">
               <p class="entry-title">Documentation Secretary</p>
               <p class="entry-org">ShokherMulluk</p>
+              <p>Maintained records and reports for a community organization.</p>
             </div>
           </li>
         </ol>
 
         <ul class="bullets bullets-spaced">
-          <li>Led peer study groups in college and university, running concept-clearing sessions and sharing notes.</li>
-          <li>Volunteered with Hope Foundation, organizing iftar and distributing Eid gifts to children in rural areas.</li>
+          <li>Led peer study groups at university, organizing concept-clearing sessions for 8–12 students per term.</li>
         </ul>
       </section>
       <!-- END SECTION: LEADERSHIP AND SERVICE -->
@@ -581,7 +595,7 @@
            FOOTER: update the date when you change the content
            ================================================================= -->
       <footer class="site-footer">
-        <p>© 2026 Ahmed Noorim. Last updated October 2026.</p>
+        <p>© 2026 Ahmed Noorim. Last updated November 2026.</p>
       </footer>
 
     </main>
